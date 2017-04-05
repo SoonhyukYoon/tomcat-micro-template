@@ -1,12 +1,9 @@
-##
-## Tomcat8 Server Template
-##
-## @author   LG CNS 윤순혁
-## @version  1.0
+# README
 
-##
-## README
-##
+## Tomcat8 Server Template
+
+### Redhat 계열 Linux OS(64Bit)에서 활용 가능한 Tomcat8 Template
+
 0. 계정 만들기
 Tomcat 서버를 설치하고 실행할 계정을 만들어야 한다.
 예) wasadm

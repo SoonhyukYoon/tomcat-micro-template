@@ -4,7 +4,9 @@
 
 ### Redhat 계열 Linux OS(64Bit)에서 활용 가능한 Tomcat8 Template
 
-APR Connector 적용
+* JVM Option Tuned
+* APR Connector 적용
+* JDBC Driver Library 적용: Oracle/MySQL/MariaDB/PostgreSQL
 
 1. 계정 만들기
 Tomcat 서버를 설치하고 실행할 계정을 만들어야 한다.<br>
@@ -18,8 +20,7 @@ Tomcat 서버를 설치하고 실행할 계정을 만들어야 한다.<br>
 <br>
   mkdir -p /logs/wasadm/tomcat8/servers/SERVER_ID/hdump<br>
   mkdir -p /logs/wasadm/tomcat8/servers/SERVER_ID/nohup<br>
-  mkdir -p /logs/wasadm/tomcat8/servers/SERVER_ID/gclog
-<br>
+  mkdir -p /logs/wasadm/tomcat8/servers/SERVER_ID/gclog<br>
 <br>
 3. Create Tomcat Engine Directory & Template 압축 해제<br>
   mkdir -p /servers/wasadm/tomcat8/servers/SERVER_ID<br>
@@ -29,7 +30,6 @@ Tomcat 서버를 설치하고 실행할 계정을 만들어야 한다.<br>
 4. Link Log Directory<br>
   cd /servers/wasadm/tomcat8/servers/SERVER_ID<br>
   ln -s /logs/wasadm/tomcat8/servers/SERVER_ID logs<br>
-<br>
 <br>
 5. Please correct the following files:<br>
 (응용 프로그램 환경변수 및 설치 경로)<br>
@@ -41,8 +41,9 @@ Tomcat 서버를 설치하고 실행할 계정을 만들어야 한다.<br>
   vi bin/setenv.sh
 <br>
 <br>
-7. Please check the following files:
-(Tomcat 서버 DB 연동 환경설정)<br>
+7. Please check the following files:<br>
+(Tomcat 서버 DB 연동 환경설정: 적용 DB에 따라 Driver 속성을 변경한다)<br>
+('lib/datasource': 기본제공 JDBC 라이브러리 경로)<br>
   vi conf/Catalina/localhost/ROOT.xml
 <br>
 <br>
@@ -50,7 +51,7 @@ Tomcat 서버를 설치하고 실행할 계정을 만들어야 한다.<br>
 Copy ROOT.war to /apps/wasadm/APP_LONG_NAME/applications/
 <br>
 <br>
-9. 시작/중단
+9. 시작/중단<br>
 start.sh (기동)
 <br>
 stop.sh (중단)

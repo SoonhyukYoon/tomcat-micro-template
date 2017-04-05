@@ -4,6 +4,7 @@
 
 ### Redhat 계열 Linux OS(64Bit)에서 활용 가능한 Tomcat8 Template
 
+0. Spec
   * JVM Option Tuned
   * APR Connector 적용
   * JDBC Driver Library 적용: Oracle/MySQL/MariaDB/PostgreSQL

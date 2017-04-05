@@ -5,13 +5,13 @@
 ### Redhat 계열 Linux OS(64Bit)에서 활용 가능한 Tomcat8 Template
 
 0. Spec
-  * JVM Option Tuned
-  * APR Connector 적용
-  * JDBC Driver Library 적용: Oracle/MySQL/MariaDB/PostgreSQL
-
+- JVM Option Tuned
+- APR Connector 적용
+- JDBC Driver Library 적용: Oracle/MySQL/MariaDB/PostgreSQL<br>
+<br>
 1. 계정 만들기
 Tomcat 서버를 설치하고 실행할 계정을 만들어야 한다.<br>
-예) wasadm
+예) wasadm<br>
 <br>
 2. Create Source & Log Directory<br>
 * APP_LONG_NAME: 각 Java 프로젝트 이름과 동일<br>

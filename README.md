@@ -17,20 +17,20 @@ Tomcat 서버를 설치하고 실행할 계정을 만들어야 한다.<br>
 * APP_LONG_NAME: 각 Java 프로젝트 이름과 동일<br>
 * SERVER_ID: '응용 프로그램 약어'_'포트' (ex> API G/W Service = apigw_8080)<br>
 <br>
-  mkdir -p /apps/wasadm/APP_LONG_NAME/applications<br>
+  mkdir -p /srcw001/wasadm/APP_LONG_NAME/applications<br>
 <br>
-  mkdir -p /logs/wasadm/tomcat8/servers/SERVER_ID/hdump<br>
-  mkdir -p /logs/wasadm/tomcat8/servers/SERVER_ID/nohup<br>
-  mkdir -p /logs/wasadm/tomcat8/servers/SERVER_ID/gclog<br>
+  mkdir -p /logs001/wasadm/tomcat8/servers/SERVER_ID/hdump<br>
+  mkdir -p /logs001/wasadm/tomcat8/servers/SERVER_ID/nohup<br>
+  mkdir -p /logs001/wasadm/tomcat8/servers/SERVER_ID/gclog<br>
 <br>
 3. Create Tomcat Engine Directory & Template 압축 해제<br>
-  mkdir -p /servers/wasadm/tomcat8/servers/SERVER_ID<br>
-  Template 압축해제 --> 'template' 디렉터리 생성 --> 'template' 디렉터리의 모든 파일을 '/servers/wasadm/tomcat8/servers/SERVER_ID'에 복사
+  mkdir -p /engn001/wasadm/tomcat8/servers/SERVER_ID<br>
+  Template 압축해제 --> 'template' 디렉터리 생성 --> 'template' 디렉터리의 모든 파일을 '/engn001/wasadm/tomcat8/servers/SERVER_ID'에 복사
 <br>
 <br>
 4. Link Log Directory<br>
-  cd /servers/wasadm/tomcat8/servers/SERVER_ID<br>
-  ln -s /logs/wasadm/tomcat8/servers/SERVER_ID logs<br>
+  cd /engn001/wasadm/tomcat8/servers/SERVER_ID<br>
+  ln -s /logs001/wasadm/tomcat8/servers/SERVER_ID logs<br>
 <br>
 5. Please correct the following files:<br>
 (응용 프로그램 환경변수 및 설치 경로)<br>
@@ -49,7 +49,7 @@ Tomcat 서버를 설치하고 실행할 계정을 만들어야 한다.<br>
 <br>
 <br>
 8. Source Deploy to Application Archive Directory
-Copy ROOT.war to /apps/wasadm/APP_LONG_NAME/applications/
+Copy ROOT.war to /srcw001/wasadm/APP_LONG_NAME/applications/
 <br>
 <br>
 9. 시작/중단<br>
